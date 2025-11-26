@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_unsigned.c                                   :+:      :+:    :+:   */
+/*   print_unsigned_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaman <kkaman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 09:15:07 by kkaman            #+#    #+#             */
-/*   Updated: 2025/11/07 10:12:31 by kkaman           ###   ########.fr       */
+/*   Updated: 2025/11/26 13:43:32 by kkaman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_unsigned(t_format *fmt, unsigned int n)
+int	print_unsigned_bonus(t_format *fmt, unsigned int n)
 {
 	t_lens	lens;
 	int		result;

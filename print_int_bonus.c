@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_int.c                                        :+:      :+:    :+:   */
+/*   print_int_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaman <kkaman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 02:14:42 by kkaman            #+#    #+#             */
-/*   Updated: 2025/11/15 14:10:10 by kkaman           ###   ########.fr       */
+/*   Updated: 2025/11/26 13:58:22 by kkaman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_int(t_format *fmt, int n)
+int	print_int_bonus(t_format *fmt, int n)
 {
 	long	num;
 	char	sign;

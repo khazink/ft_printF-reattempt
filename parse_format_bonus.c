@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_format.c                                     :+:      :+:    :+:   */
+/*   parse_format_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaman <kkaman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:02:02 by kkaman            #+#    #+#             */
-/*   Updated: 2025/11/14 09:23:05 by kkaman           ###   ########.fr       */
+/*   Updated: 2025/11/26 12:08:06 by kkaman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,21 @@ void	init_format(t_format *fmt)
 int	handle_conversion(t_format *fmt, va_list args)
 {
 	if (fmt->specifier == 'c')
-		return (print_char(fmt, va_arg(args, int)));
+		return (print_char_bonus(fmt, va_arg(args, int)));
 	if (fmt->specifier == 's')
-		return (print_string(fmt, va_arg(args, char *)));
+		return (print_string_bonus(fmt, va_arg(args, char *)));
 	if (fmt->specifier == 'p')
-		return (print_pointer(fmt, va_arg(args, void *)));
+		return (print_pointer_bonus(fmt, va_arg(args, void *)));
 	if (fmt->specifier == 'd' || fmt->specifier == 'i')
-		return (print_int(fmt, va_arg(args, int)));
+		return (print_int_bonus(fmt, va_arg(args, int)));
 	if (fmt->specifier == 'u')
-		return (print_unsigned(fmt, va_arg(args, unsigned int)));
+		return (print_unsigned_bonus(fmt, va_arg(args, unsigned int)));
 	if (fmt->specifier == 'x')
-		return (print_hex(fmt, va_arg(args, unsigned int), 0));
+		return (print_hex_bonus(fmt, va_arg(args, unsigned int), 0));
 	if (fmt->specifier == 'X')
-		return (print_hex(fmt, va_arg(args, unsigned int), 1));
+		return (print_hex_bonus(fmt, va_arg(args, unsigned int), 1));
 	if (fmt->specifier == '%')
-		return (print_percent(fmt));
+		return (print_percent_bonus(fmt));
 	return (0);
 }
 

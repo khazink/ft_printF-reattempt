@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_string.c                                     :+:      :+:    :+:   */
+/*   print_string_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaman <kkaman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 01:22:45 by kkaman            #+#    #+#             */
-/*   Updated: 2025/11/14 09:55:30 by kkaman           ###   ########.fr       */
+/*   Updated: 2025/11/26 13:43:12 by kkaman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	print_string_right(char *str, t_lens *lens)
 	return (count);
 }
 
-int	print_string(t_format *fmt, char *str)
+int	print_string_bonus(t_format *fmt, char *str)
 {
 	t_lens	lens;
 

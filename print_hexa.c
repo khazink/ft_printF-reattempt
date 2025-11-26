@@ -1,50 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_numbers.c                                    :+:      :+:    :+:   */
+/*   print_hexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaman <kkaman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/22 11:25:17 by kkaman            #+#    #+#             */
-/*   Updated: 2025/11/26 11:25:48 by kkaman           ###   ########.fr       */
+/*   Created: 2025/11/22 17:03:07 by kkaman            #+#    #+#             */
+/*   Updated: 2025/11/26 09:16:52 by kkaman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_integer(int d)
+int	print_hex(unsigned long hex, int uppercase)
 {
 	int		count;
-	char	num;
-	long	nb;
+	char	*base;
 
-	nb = d;
 	count = 0;
-	if (nb < 0)
-	{
-		nb = -nb;
-		count += write (1, "-", 1);
-	}
-	if (nb >= 10)
-	{
-		count += print_integer(nb / 10);
-	}
-	num = (nb % 10) + '0';
-	count += write (1, &num, 1);
+	if (uppercase)
+		base = "0123456789ABCDEF";
+	else
+		base = "0123456789abcdef";
+	if (hex >= 16)
+		count += print_hex(hex / 16, uppercase);
+	count += write (1, &base[hex % 16], 1);
 	return (count);
 }
 
-int	print_unsigned(unsigned int u)
+int	print_pointer(void *ptr)
 {
-	int		count;
-	char	num;
+	int				count;
+	unsigned long	addr;
 
 	count = 0;
-	if (u >= 10)
-	{
-		count += print_unsigned(u / 10);
-	}
-	num = (u % 10) + '0';
-	count += write (1, &num, 1);
+	if (!ptr)
+		return (write(1, "(nil)", 5));
+	addr = (unsigned long)ptr;
+	count += write(1, "0x", 2);
+	count += print_hex(addr, 0);
 	return (count);
 }

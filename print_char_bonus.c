@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_char.c                                       :+:      :+:    :+:   */
+/*   print_char_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaman <kkaman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 18:22:59 by kkaman            #+#    #+#             */
-/*   Updated: 2025/11/06 14:41:35 by kkaman           ###   ########.fr       */
+/*   Updated: 2025/11/26 13:42:38 by kkaman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	print_char_right(int c, int padding)
 	return (count);
 }
 
-int	print_char(t_format *fmt, int c)
+int	print_char_bonus(t_format *fmt, int c)
 {
 	int	padding;
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_pointer.c                                    :+:      :+:    :+:   */
+/*   print_pointer_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaman <kkaman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 22:16:51 by kkaman            #+#    #+#             */
-/*   Updated: 2025/11/12 22:32:13 by kkaman           ###   ########.fr       */
+/*   Updated: 2025/11/26 13:44:27 by kkaman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	print_null_pointer(t_format *fmt)
 	return (count);
 }
 
-int	print_pointer(t_format *fmt, void *ptr)
+int	print_pointer_bonus(t_format *fmt, void *ptr)
 {
 	unsigned long		addr;
 	t_lens				lens;

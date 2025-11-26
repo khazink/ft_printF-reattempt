@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_percent.c                                    :+:      :+:    :+:   */
+/*   print_percent_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaman <kkaman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 22:49:07 by kkaman            #+#    #+#             */
-/*   Updated: 2025/11/12 22:56:34 by kkaman           ###   ########.fr       */
+/*   Updated: 2025/11/26 13:48:30 by kkaman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	print_percent_left(int spaces)
 	return (count);
 }
 
-int	print_percent(t_format *fmt)
+int	print_percent_bonus(t_format *fmt)
 {
 	int	spaces;
 
